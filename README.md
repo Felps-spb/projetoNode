@@ -86,7 +86,7 @@ criar uma plataforma de blog onde os usuários podem se registrar, fazer login, 
 ## Middleware de Autenticação
 
 O projeto utiliza um middleware de autenticação para proteger as rotas administrativas. Apenas usuários autenticados podem acessar essas rotas.
-
+```
 javascript
 function eAdmin(req, res, next) {
     if (req.isAuthenticated() && req.user.isAdmin) {
@@ -95,7 +95,7 @@ function eAdmin(req, res, next) {
     req.flash('error_msg', 'Você precisa ser um administrador para acessar esta área');
     res.redirect('/');
 }
-
+```
 
 Contribuição
 Se você quiser contribuir com este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
